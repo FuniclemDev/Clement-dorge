@@ -108,3 +108,36 @@ main.profile {
         opacity: 1;
     }
 }
+/* Styles pour la section de présentation */
+.presentation {
+    background-color: #f0f0f0;
+    padding: 40px 50px;
+    text-align: center;
+    margin-top: 50px; /* Ajuste la marge supérieure pour descendre la section */
+}
+
+.presentation-content {
+    max-width: 80vw;
+    margin: auto;
+}
+
+.presentation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.presentation p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.epitech {
+    margin-top: 30px;
+}
+
+.epitech-logo {
+    width: 300px; /* Ajuste la taille du logo selon ton besoin */
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
