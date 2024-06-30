@@ -5,13 +5,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     overflow-x: hidden;
-    background-color: #656464;
+    background: linear-gradient(#656464, #bdb7b7);
     overflow-y: auto; 
 }
 
+.announcement {
+    background-color: #b21111;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.announcement a {
+    color: inherit; /* Utiliser la couleur du texte parent */
+    text-decoration: none; /* Retirer le soulignement */
+    transition: color 0.3s ease; /* Transition pour un effet au survol */
+}
+
+.announcement a:hover {
+    color: #afb0b4; /* Changer la couleur au survol */
+}
+
 header {
+    margin-top: 55px;
     background-color: #333;
     color: #ffffff;
     padding: 10px 0;
@@ -53,7 +72,7 @@ main.profile {
     justify-content: center;
     flex-direction: row;
     width: 80%;
-    margin-top: 130px;
+    margin-top: 180px;
     animation: fadeIn 1.5s ease-in;
 }
 
@@ -68,8 +87,8 @@ main.profile {
 
 .profile-pic {
     border-radius: 50%;
-    width: 33vw;
-    height: 33vw;
+    width: 25vw;
+    height: 25vw;
     object-fit: cover;
     margin-right: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

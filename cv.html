@@ -8,18 +8,20 @@
         .pdf-container {
             display: flex;
             justify-content: center;
-            margin-top: 100px; /* Ajuste cette valeur en fonction de la hauteur de ton en-tête */
+            margin-top: 200px; /* Ajuste cette valeur en fonction de la hauteur de ton en-tête */
         }
-        iframe {
-            width: 80%;
-            height: 80vh;
-            width: 80vw;
+        embed {
+            width: 75vw;
+            height: 75vh;
             border: 1px solid #ccc;
         }
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="height: 100vh;">
+    <div class="announcement"><a href="cv.html">
+        <p>Je suis actuellement à la recherche d'un stage en développement informatique entre juillet et décembre.</p>
+    </a></div>
     <header>
         <nav>
             <ul>
@@ -31,7 +33,7 @@
         </nav>
     </header>
     <div class="pdf-container">
-        <iframe src="CV Clément DORGE.pdf"></iframe>
+        <embed src="CV Clément DORGE.pdf" type="application/pdf">
     </div>
 </body>
 </html>
