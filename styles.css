@@ -8,6 +8,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     background-color: #656464;
+    overflow-y: auto; 
 }
 
 header {
@@ -71,6 +72,7 @@ main.profile {
     height: 33vw;
     object-fit: cover;
     margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -113,9 +115,11 @@ main.profile {
 /* Styles pour la section de présentation */
 .presentation {
     background-color: #a5a2a2;
-    padding: 40px 50px;
+    padding: 20px 50px;
     text-align: center;
+    box-shadow: 0 -40px 80px rgba(0, 0, 0, 0.3);
     margin-top: 50px; /* Ajuste la marge supérieure pour descendre la section */
+    flex-shrink: 0;
 }
 
 .presentation-content {
@@ -143,6 +147,19 @@ main.profile {
     margin-bottom: 10px;
     margin-top: 40px;
 }
+
+/* Animation pour la présentation */
+.presentation.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.presentation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Styles pour le portfolio */
 .portfolio {
