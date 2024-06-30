@@ -7,11 +7,12 @@ body {
     align-items: center;
     height: 100vh;
     overflow-x: hidden;
+    background-color: #656464;
 }
 
 header {
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 0;
     text-align: center;
     width: 100%;
@@ -111,7 +112,7 @@ main.profile {
 
 /* Styles pour la section de présentation */
 .presentation {
-    background-color: #f0f0f0;
+    background-color: #a5a2a2;
     padding: 40px 50px;
     text-align: center;
     margin-top: 50px; /* Ajuste la marge supérieure pour descendre la section */
@@ -203,4 +204,15 @@ main.profile {
 
 .project-item:hover .project-info {
     opacity: 1;
+}
+
+/* Styles pour les liens de contact */
+.profile-info a {
+    color: inherit; /* Utiliser la couleur du texte parent */
+    text-decoration: none; /* Retirer le soulignement */
+    transition: color 0.3s ease; /* Transition pour un effet au survol */
+}
+
+.profile-info a:hover {
+    color: #afb0b4; /* Changer la couleur au survol */
 }
