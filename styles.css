@@ -261,9 +261,9 @@ main.profile {
 
 /* Styles pour les liens de contact */
 .profile-info a {
-    color: inherit; /* Utiliser la couleur du texte parent */
-    text-decoration: none; /* Retirer le soulignement */
-    transition: color 0.3s ease; /* Transition pour un effet au survol */
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .profile-info a:hover {
