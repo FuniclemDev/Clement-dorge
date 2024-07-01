@@ -6,12 +6,12 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    background: linear-gradient(#1c2b5b, #aacbe7);
+    background: linear-gradient(#3572EF, #3ABEF9);
     overflow-y: auto; 
 }
 
 .announcement {
-    background-color: #b21111;
+    background-color: #102646;
     padding: 5px;
     text-align: center;
     position: fixed;
@@ -19,10 +19,20 @@ body {
     z-index: 1000;
 }
 
+@keyframes blink {
+    0%, 100% {
+        color: rgba(0, 234, 255, 0.822);
+    }
+    50% {
+        color: white;
+    }
+}
+
 .announcement a {
-    color: inherit; /* Utiliser la couleur du texte parent */
+    color: white ; /* Utiliser la couleur du texte parent */
     text-decoration: none; /* Retirer le soulignement */
     transition: color 0.3s ease; /* Transition pour un effet au survol */
+    animation: blink 3s infinite;
 }
 
 .announcement a:hover {
@@ -31,7 +41,7 @@ body {
 
 header {
     margin-top: 55px;
-    background-color: #333;
+    background-color: #050C9C;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
@@ -134,12 +144,14 @@ main.profile {
 
 /* Styles pour la section de présentation */
 .presentation {
-    background-color: #7b7878;
+    background-color: #002f4893;
+    border-radius: 20px;
     padding: 20px 50px;
     text-align: center;
     box-shadow: 0 -40px 80px rgba(0, 0, 0, 0.3);
     margin-top: 80px; /* Ajuste la marge supérieure pour descendre la section */
     flex-shrink: 0;
+    margin-bottom: 40px;
 }
 
 .presentation-content {
@@ -197,16 +209,19 @@ main.profile {
     max-width: 1200px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     margin: auto;
+    border-radius: 8px;
 }
 
 .project-item {
     position: relative;
     margin: 20px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
 .project-item img {
     width: 17w;
+    border-radius: 8px;
     height: 17vw;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -252,5 +267,5 @@ main.profile {
 }
 
 .profile-info a:hover {
-    color: #afb0b4; /* Changer la couleur au survol */
+    color: #ffffff; /* Changer la couleur au survol */
 }
