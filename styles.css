@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    background-color: rgb(218, 234, 255);
+    background: radial-gradient(rgba(163, 165, 255, 0.26), white);
     overflow-y: auto;
     min-height: 100vh;
 }
@@ -161,11 +161,11 @@ main.profile {
 
 /* Styles pour la section de présentation */
 .presentation {
-    background-color: #002f4893;
+    background-color: #00497096;
     border-radius: 20px;
     padding: 20px 5vw;
     text-align: center;
-    box-shadow: 0 -40px 80px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.3);
     margin-top: 80px;
     flex-shrink: 0;
     margin-bottom: 40px;
