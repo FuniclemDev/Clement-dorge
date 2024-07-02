@@ -21,10 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
             presentationSection.classList.remove('visible');
         }
     };
-
-    // Initial check in case the section is already in view
     onScroll();
-
-    // Add scroll event listener
     window.addEventListener('scroll', onScroll);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop < 70) {
+            // Scroll down
+            header.style.transform = "translate(-50%, -" + scrollTop + "px)";
+        } else {
+            // Scroll up
+            header.style.transform = "translate(-50%, -70px)";
+        }
+        lastScrollTop = scrollTop;
+    });
 });
