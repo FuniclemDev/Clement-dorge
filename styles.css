@@ -161,7 +161,7 @@ main.profile {
 
 /* Styles pour la section de présentation */
 .presentation {
-    background-color: #00497096;
+    background-color: #001370e6;
     border-radius: 20px;
     padding: 20px 5vw;
     text-align: center;
@@ -179,6 +179,10 @@ main.profile {
 .presentation h2 {
     font-size: 6vw;
     margin-bottom: 10px;
+}
+
+.presentation {
+    color: white;
 }
 
 .presentation p {
