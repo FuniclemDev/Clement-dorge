@@ -37,6 +37,7 @@ body {
     text-decoration: none;
     transition: color 0.3s ease;
     animation: blink 3s infinite;
+    font-size: 12px;
 }
 
 .announcement a:hover {
@@ -69,21 +70,21 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 2vw;
+    margin: 0 1vw;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 4vw;
-    padding: 2vw 4vw;
+    font-size: 3vw;
+    padding: 1vw 2vw;
     display: inline-block;
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #b80e22;
-    font-size: 5vw;
+    font-size: 3vw;
 }
 
 main.profile {
@@ -325,6 +326,10 @@ main.profile {
         font-size: 18px;
     }
 
+    .announcement a {
+        font-size: 19px;
+    }
+    
     .epitech-logo {
         width: 300px;
     }
