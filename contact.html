@@ -6,33 +6,82 @@
     <title>Contact - Clément DORGE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
+    <style>
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+        form {
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 60px rgb(8, 45, 124);
+        }
+    </style>
 </head>
 <body style="height: 100vh;">
     <div class="announcement"><a href="cv.html">
         <p>Je suis actuellement à la recherche d'un stage en développement informatique entre juillet et décembre.</p>
     </a></div>
     <section class="main-content" style="box-shadow: 0 10px 60px rgb(8, 45, 124); overflow-x: hidden; background-image: url('img/bg.png'); background-size: cover; width: 100%; background-repeat: no-repeat; background-position: center center;">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="home.html">Accueil</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="profile" style="margin-top: 200px;">
-        <img src="img/photo-profil.jpg" alt="Photo de Clément DORGE" class="profile-pic">
-        <div style="color: white;" class="profile-info">
-            <h1>Clément DORGE</h1>
-            <h3 style="margin-top: 30px; font-size: 20px; color: white;">Contactez-moi</h3>
-            <p style="margin-top: 10px;font-size: 18px; color: white;">Email : <a href="mailto:clement.dorge@epitech.eu">clement.dorge@epitech.eu</a></p>
-            <p style="margin-top: 8px;font-size: 18px; color: white;">Téléphone : <a href="tel:+33624086128">06 24 08 61 28</a></p>
-            <p style="margin-top: 8px;font-size: 18px; color: white;">LinkedIn : <a href="https://www.linkedin.com/in/clement-dorge">linkedin.com/in/clement-dorge</a></p>
-            <p style="margin-top: 8px;font-size: 18px; color: white;">Github : <a href="https://github.com/FuniclemDev">github.com/Clément-dorge</a></p>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Accueil</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="profile" style="margin-top: 200px;">
+            <img src="img/photo-profil.jpg" alt="Photo de Clément DORGE" class="profile-pic">
+            <div style="color: white;" class="profile-info">
+                <h1>Clément DORGE</h1>
+                <h3 style="margin-top: 30px; font-size: 20px; color: white;">Contactez-moi</h3>
+                <p style="margin-top: 10px;font-size: 18px; color: white;">Email : <a href="mailto:clement.dorge@epitech.eu">clement.dorge@epitech.eu</a></p>
+                <p style="margin-top: 8px;font-size: 18px; color: white;">Téléphone : <a href="tel:+33624086128">06 24 08 61 28</a></p>
+                <p style="margin-top: 8px;font-size: 18px; color: white;">LinkedIn : <a href="https://www.linkedin.com/in/clement-dorge">linkedin.com/in/clement-dorge</a></p>
+                <p style="margin-top: 8px;font-size: 18px; color: white;">Github : <a href="https://github.com/FuniclemDev">github.com/Clément-dorge</a></p>
+            </div>
+        </main>
+        <div class="form-container">
+            <form id="contact-form" action="https://formspree.io/f/xpwazlgo" method="post">
+                <div style="margin-bottom: 20px;">
+                    <label for="name" style="color: #000; font-size: 18px;">Nom/Prénom<span style="color: red;"> *</span></label><br>
+                    <input type="text" id="name" name="name" required style="width: 96%; padding: 10px; font-size: 16px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="tel" style="color: #000; font-size: 18px;">Téléphone</label><br>
+                    <input type="text" id="tel" name="tel" style="width: 96%; padding: 10px; font-size: 16px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="color: #000; font-size: 18px;">Email<span style="color: red;"> *</span></label><br>
+                    <input type="email" id="email" name="email" required style="width: 96%; padding: 10px; font-size: 16px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="reason" style="color: #000; font-size: 18px;">Motif<span style="color: red;"> *</span></label><br>
+                    <select id="reason" name="reason" required style="width: 100%; padding: 10px; font-size: 16px;">
+                        <option value="demande-info">Demande d'informations</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="offre-emploi">Offre d'emploi</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="message" style="color: #000; font-size: 18px;">Message</label><br>
+                    <textarea id="message" name="message" rows="5" style="width: 96%; padding: 10px; font-size: 16px; max-width: 96%; min-width: 50%; max-height: 1000px; min-height: 40px;"></textarea>
+                </div>
+                <div>
+                    <button type="submit" style="margin-left: 50%; transform: translate(-50%, 0); background-color: #001370e6; color: white; padding: 10px 20px; font-size: 18px; border: none; border-radius: 5px;">Envoyer</button>
+                </div>
+            </form>
         </div>
-    </main>
     </section>
     <footer>
         <div class="footer-content">
