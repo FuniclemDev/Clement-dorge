@@ -26,11 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    let lastScrollTop = 0;
     const header = document.querySelector("header");
 
     window.addEventListener("scroll", () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        let scrollTop = document.documentElement.scrollTop;
         
         if (scrollTop < 70) {
             // Scroll down
@@ -39,6 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
             // Scroll up
             header.style.transform = "translate(-50%, -70px)";
         }
-        lastScrollTop = scrollTop;
     });
 });
