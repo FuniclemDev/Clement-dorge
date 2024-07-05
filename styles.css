@@ -11,6 +11,45 @@ body {
     min-height: 100vh;
 }
 
+/* Cursor */
+body, a, select, option, input[type="submit"], input, button, textarea {
+    cursor: none;
+}
+
+.custom-cursor {
+    left: -100px;
+    top: -100px;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 123, 255, 0.8);
+    pointer-events: none;
+    transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 208, 255);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease;
+}
+
+.custom-cursor.hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Body */
+
 .main-content {
     flex: 1;
 }
@@ -83,7 +122,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #b80e22;
+    color: #3799b7;
     font-size: 3.5vw;
 }
 

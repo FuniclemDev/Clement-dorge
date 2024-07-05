@@ -40,3 +40,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const customCursor = document.createElement('div');
+    customCursor.classList.add('custom-cursor');
+    document.body.appendChild(customCursor);
+
+    document.addEventListener('mousemove', (e) => {
+        customCursor.style.left = `${e.clientX}px`;
+        customCursor.style.top = `${e.clientY}px`;
+    });
+
+    function addHoverEffect() {
+        customCursor.classList.add('hover');
+    }
+
+    function removeHoverEffect() {
+        customCursor.classList.remove('hover');
+    }
+
+    const elementsToHover = ['a', 'textarea', 'input', 'select', 'button'];
+
+    elementsToHover.forEach(element => {
+        document.querySelectorAll(element).forEach(link => {
+            link.addEventListener('mouseover', addHoverEffect);
+            link.addEventListener('mouseout', removeHoverEffect);
+        });
+    });
+});
+
+
