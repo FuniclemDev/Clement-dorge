@@ -343,7 +343,7 @@ main.profile {
 }
 
 .project-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .project-item:hover .project-info {
