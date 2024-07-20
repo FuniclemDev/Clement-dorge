@@ -59,4 +59,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".details-button");
 
+    buttons.forEach(button => {
+        let clickable = false;
+        let timeoutId;
+
+        button.addEventListener("mouseover", function() {
+            const opacity = window.getComputedStyle(button).opacity;
+            if (opacity == 1) {
+                timeoutId = setTimeout(() => {
+                    clickable = true;
+                }, 300); // 0.3 seconds delay
+            } else {
+                clickable = false;
+            }
+        });
+
+        button.addEventListener("mouseleave", function() {
+            clearTimeout(timeoutId);
+            clickable = false;
+        });
+
+        button.addEventListener("mouseout", function() {
+            clearTimeout(timeoutId);
+            clickable = false;
+        });
+
+        button.addEventListener("click", function(event) {
+            if (!clickable) {
+                event.preventDefault();
+            }
+        });
+    });
+});

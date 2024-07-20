@@ -328,7 +328,7 @@ main.profile {
     padding: 10px;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 3s ease;
 }
 
 .project-info h3 {
@@ -376,13 +376,6 @@ main.profile {
 
 .profile-info a:hover {
     color: #ffffff;
-}
-
-@media (max-width: 767px) {
-    .details-button {
-        opacity: 1;
-        pointer-events: auto;
-    }
 }
 
 /* Media queries pour les plus grands écrans */
