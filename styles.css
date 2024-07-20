@@ -378,6 +378,13 @@ main.profile {
     color: #ffffff;
 }
 
+@media (max-width: 767px) {
+    .details-button {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 /* Media queries pour les plus grands écrans */
 @media (min-width: 768px) {
     nav ul li {
