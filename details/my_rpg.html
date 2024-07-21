@@ -80,7 +80,6 @@
             background-color: #001370e6;
             border-radius: 10px;
             box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 15vh;
             margin-bottom: auto;
         }
 
@@ -119,10 +118,11 @@
     <main class="project-details">
         <div class="carousel">
             <div class="carousel-images">
-                <iframe src="../video/rpg/trailer_rpg.mp4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <img src="../img/My_rpg.png" alt="My RPG">
-                <img src="../img/MyPaint_logo.png" alt="Front Messenger Image 1">
-                <img src="../img/My_radar_logo.png" alt="Front Messenger Image 2">
+                <iframe id="rpg-trailer" src="../video/rpg/trailer_rpg.mp4" frameborder="" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img src="../video/rpg/debut.gif" alt="My RPG">
+                <img src="../video/rpg/inventaire.gif" alt="Front Messenger Image 1">
+                <img src="../video/rpg/save.gif" alt="Front Messenger Image 1">
+                <img src="../video/rpg/settings.gif" alt="Front Messenger Image 1">
             </div>
             <div class="carousel-buttons">
                 <button id="prev">&#10096;</button>
@@ -151,6 +151,18 @@
         nextButton.addEventListener('click', () => {
             index = (index < carouselImages.children.length - 1) ? index + 1 : 0;
             carouselImages.style.transform = `translateX(${-index * 100}%)`;
+        });
+
+        window.addEventListener('load', () => {
+            const iframe = document.getElementById('rpg-trailer');
+            const iframeWindow = iframe.contentWindow;
+            
+            iframe.onload = function() {
+                const video = iframeWindow.document.querySelector('video');
+                if (video) {
+                    video.muted = true;
+                }
+            };
         });
     </script>
     <div class="custom-cursor"></div>
