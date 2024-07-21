@@ -75,3 +75,40 @@
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: auto;
 }
+
+@media (min-width:768px) {
+    .description-container {
+        text-align: justify;
+    }
+}
+
+/* Styles spécifiques aux écrans de téléphone */
+@media (max-width: 768px) {
+    .media-container {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .description-container {
+        flex: 1;
+        text-align: center;
+        margin-top: 20px; /* Espacement entre l'image et la description */
+    }
+    
+    .project-details {
+        flex-direction: column;
+    }
+
+    .description-details {
+        text-align: center;
+    }
+
+    .carousel-images {
+        width: 100%;
+    }
+
+    .carousel-images img,
+    .carousel-images iframe {
+        width: 100%;
+    }
+}
