@@ -5,86 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails du Projet - Clément DORGE</title>
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        .media-container {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .carousel {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 35vw;
-        }
-
-        .carousel-images img,
-        .carousel-images iframe {
-            max-width: 100%;
-            border-radius: 20px;
-            flex: 1 0 100%;
-        }
-
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .carousel-buttons button {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
-        
-        .media-container img, .media-container iframe {
-            width: 100%;
-            border-radius: 20px;
-        }
-        
-        .description-container {
-            flex: 2;
-            color: #333;
-        }
-        
-        .description-container h2 {
-            font-size: 2em;
-            margin-top: 0;
-            color: rgba(224, 224, 224, 0.705);
-        }
-        
-        .description-container p {
-            font-size: 1.2em;
-            line-height: 1.4;
-            margin: 10px 0;
-            color: white;
-        }
-        
-        .project-details {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 20px;
-            padding: 40px;
-            background-color: #001370e6;
-            border-radius: 10px;
-            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: auto;
-        }
-
-        
-        </style>
+    <link rel="stylesheet" href="styles_details.css">
     <link rel="icon" href="../img/favicon.png" type="image/png">
 </head>
 <body style="background: linear-gradient(rgb(7, 134, 238), rgb(7, 53, 105))">
@@ -101,7 +22,7 @@
             </ul>
         </nav>
     </header>
-    <main class="project-details">
+    <main class="project-details" style="margin-top: 13vh;">
         <div class="media-container">
             <img src="../img/My_rpg.png" alt="My RPG">
         </div>
@@ -137,34 +58,7 @@
         </div>
     </footer>    
     <script src="../script.js"></script>
-    <script>
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        const carouselImages = document.querySelector('.carousel-images');
-        let index = 0;
-
-        prevButton.addEventListener('click', () => {
-            index = (index > 0) ? index - 1 : carouselImages.children.length - 1;
-            carouselImages.style.transform = `translateX(${-index * 100}%)`;
-        });
-
-        nextButton.addEventListener('click', () => {
-            index = (index < carouselImages.children.length - 1) ? index + 1 : 0;
-            carouselImages.style.transform = `translateX(${-index * 100}%)`;
-        });
-
-        window.addEventListener('load', () => {
-            const iframe = document.getElementById('rpg-trailer');
-            const iframeWindow = iframe.contentWindow;
-            
-            iframe.onload = function() {
-                const video = iframeWindow.document.querySelector('video');
-                if (video) {
-                    video.muted = true;
-                }
-            };
-        });
-    </script>
+    <script src="script_details.js"></script>
     <div class="custom-cursor"></div>
 </body>
 </html>

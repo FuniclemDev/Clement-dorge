@@ -1,0 +1,77 @@
+
+.media-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 35vw;
+}
+
+.carousel-images img,
+.carousel-images iframe {
+    max-width: 100%;
+    border-radius: 20px;
+    flex: 1 0 100%;
+}
+
+.carousel-buttons {
+    position: absolute;
+    height: 10vh;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+}
+
+.media-container img, .media-container iframe {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.description-container {
+    flex: 2;
+    color: #333;
+}
+
+.description-container h2 {
+    font-size: 2em;
+    margin-top: 0;
+    color: rgba(224, 224, 224, 0.705);
+}
+
+.description-container p {
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 10px 0;
+    color: white;
+}
+
+.project-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 40px;
+    background-color: #001370e6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: auto;
+}
