@@ -19,13 +19,15 @@
 }
 
 .carousel-images img,
-.carousel-images iframe {
+.carousel-images iframe,
+.carousel-images video {
     max-width: 100%;
     border-radius: 20px;
     flex: 1 0 100%;
 }
 
 .carousel-buttons {
+    pointer-events: none;
     position: absolute;
     height: 10vh;
     top: 50%;
@@ -36,6 +38,7 @@
 }
 
 .carousel-buttons button {
+    pointer-events: all;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
@@ -108,7 +111,8 @@
     }
 
     .carousel-images img,
-    .carousel-images iframe {
+    .carousel-images iframe,
+    .carousel-images video {
         width: 100%;
     }
 }
