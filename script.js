@@ -94,3 +94,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (location.pathname.endsWith(".html")) {
+    const clean = location.pathname.replace(/\.html$/, "");
+    window.history.replaceState(null, "", clean);
+  }
+});
